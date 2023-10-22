@@ -1,5 +1,6 @@
 import pandas as pd
 import time
+import resource
 
 def average(path):
     birth_data = pd.read_csv(path)
@@ -7,7 +8,7 @@ def average(path):
     weight_avg = birth_data["weight"].mean()
     return weight_avg
 
-def calculate_average_time(path):
+def calculate_time_memory(path):
     # Record the start time
     start_time = time.time()
 
