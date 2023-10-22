@@ -13,3 +13,6 @@ lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py library/*.py
 	
 all: install lint test format
+
+activate:
+	source /home/vscode/venv/bin/activate
