@@ -30,11 +30,6 @@ fn calculate_time_memory(path: &str) -> (i64, f64) {
     (end_mem_usage as i64, elapsed_time)
 }
 
-struct BirthData {
-    weight: f64,
-    // Add other fields from your CSV if needed
-}
-
 fn average(path: &str) -> Result<f64, Box<dyn Error>> {
     let file = File::open(path)?;
     let mut rdr = ReaderBuilder::new().delimiter(b',').from_reader(file);
