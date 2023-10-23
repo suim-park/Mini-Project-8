@@ -27,7 +27,7 @@ def calculate_time_memory(path):
     # Measure the final resource usage
     end_mem_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
-    print(f"Python-Elapsed Time: {elapsed_time:.3f} seconds")
+    print(f"Python-Elapsed Time: {elapsed_time:.7f} seconds")
     print(f"Python-Memory Usage Change: {end_mem_usage - start_mem_usage} kilobytes")
 
     return end_mem_usage, elapsed_time
